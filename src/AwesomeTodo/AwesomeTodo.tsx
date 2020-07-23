@@ -1,8 +1,8 @@
 import React, {useState,useEffect,useRef} from 'react';
-import TodoList from './TodoList';
+import TodoList from './TodoList/TodoList';
 import apiClient from './apiClient'
 import Modal from '../Modal'
-import AddForm from './AddForm'
+import AddForm from './TodoForm/AddForm'
 
 
 const AwesomeTodo = () => {
@@ -13,11 +13,11 @@ const AwesomeTodo = () => {
          modalRef.current.open();
     }
 
-    useEffect( () => {
-        apiClient.get('/todos').then(
-             (res) => { setData( {...data, todo: res.data}) }
-             )
-    },[]);
+    // useEffect( () => {
+    //     apiClient.get('/todos').then(
+    //          (res) => { setData( {...data, todo: res.data}) }
+    //          )
+    // },[]);
 
     return (
         <>
