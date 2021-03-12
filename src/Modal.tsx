@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 const modalRoot:any = document.getElementById('modal-root');
 
 type modalProps = {
-    ref:any
+    ref: MutableRefObject<HTMLInputElement | null>
 }
 
 const Modal:React.FC<modalProps> = forwardRef((props,ref) => {
